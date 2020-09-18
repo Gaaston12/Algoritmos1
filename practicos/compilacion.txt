@@ -1,0 +1,10 @@
+Para compilar en java guardando los .class en un directorio
+    distinto para mayor prolijidad.
+
+
+    el parámetro -d el directorio donde generan 
+    los archivos class con el bytecode.
+-- javac dir/archivo -d rutaDondeSeGuardanLosJavaclass
+
+
+java -classpath "dir/javaClass/" dir.archivo "$@"
