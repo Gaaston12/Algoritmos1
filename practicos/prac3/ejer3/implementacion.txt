@@ -1,0 +1,82 @@
+
+1)
+algerba abstracta:
+
+    〈{A},∅, ins,∪ ∈〉
+
+algebra concreta: 
+
+    [A], ∅', ins',∪',∈'
+
+
+2)
+[||] :: [A] -> {A}         ||   [||] :: [A] -> {A}         |  ins' :: A -> [A] -> [A]          | ins' :: A ->[A] -> [A]
+[|[]|] = {}                ||   [|[]|] =  ∅                |  ins' x xs = x:xs                 | ins' x ins [] = [x]
+[|x:xs|] = x ins [xs]      ||   [|x:xs|] = {x} U [xs]      | no me sirve para mantener el      | ins' x(y:ys) = (x <= y -> x:(y:ys))
+                                                           | orden                             |                | y:(ins' ys)
+                                                                                               | esto si mantiene el orden al agregar 
+                                                                                               | un elemnto a la lista
+
+
+3)
+D// [||] suryectiva 
+∀s ∈ {A} : ∃ xs ∈ [A] : [|xs|] = s
+CB: s = ∅
+ys | [|ys|] = ∅ ? -> sitomo ys = []
+[|ys|] 
+={def fucion abstraccion}
+∅
+
+HI: #s = n and ∀s ∈ {A} : ∃ xs ∈ [A] : [|xs|] = S
+CI: S' = x ins S and ∀s' ∈ {A} : ∃ xs ∈ [A] : [|xs|] = s'
+={HI}
+[|xs|] = S 
+= { x ∈ A, por propiedad de listas} 
+[|x:xs|] 
+={def [||]}
+x ins S 
+
+
+4)
+
+
+5) Definicion del invariante de representacion 
+Ord :: [A] -> Bool
+Ord [] = True
+Ord [x] = True
+Ord x:(y:xs) = x <= y ^ Ord y:xs
+
+D// ins' preserva el invariante:
+Ord ys => Ord(ins' x ys) ??
+
+Ord(ins' x ys) por induccion 
+CB : ys = []
+Ord(ins' x [])
+={def. ins'}
+Ord([x])
+={def. Ord}
+True
+
+HI: Ord(xs) => Ord(ins' x xs)
+
+CI: Ord(y:xs) => Ord(ins' x (y:xs))    
+={def. ins' y caso1 x <= y}
+Ord (x:(y:xs))
+={def ord}
+x<=y ^ Ord y:ys
+={por antecedente}
+True
+
+
+CI: Ord(y:xs) => Ord(ins' x (y:xs))    
+={def. ins' y caso2 x > y}
+Ord (y:(ins' x xs))
+={y < todos los de xs and y < x }
+Ord(ins' x xs)
+={por hipotesis}
+True
+
+
+
+
+

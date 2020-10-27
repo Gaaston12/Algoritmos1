@@ -1,0 +1,78 @@
+---1) Gaastonmaartin12@gmail.com
+
+
+---2)Explicar las diferencias entre Clases y Objetos.
+ Una clase es una estructura de programacion, es algo abstracto que se define para resolver un problema
+    y permite definir partes de la estructura de nuestro programa. En las clases se definen datos comunes
+    a todos los objetos .
+Un objeto es una instancia de la clase, es con lo que nos comunicamos
+    con los metodos y los atributos de la clase. Es un tipo de dato que surge 
+    a partir de la clase. El objeto se crea en tiempo de ejecucion y se puede tener 
+    mas de un objero que provengan de la misma clase.
+    
+
+---3)Enumere dos diferencias importantes entre Java y C++.
+c++ se puede escribir programas orientadoa  objetos y NO orientado a objetos, Java es puramente orientado a objetos.
+c++ al compilar genera un codigo de maquina para una plataforma concreta, pero java genera un codigo de maquina para la JVM.
+C++ el programador tiene el manejo de la liberacion de memoria, ej java es automatico.
+c++ tiene puntero y java no tiene ese concepto, se accede a los objetos mediante referencias.
+c++ tiene herencia multiple y java no por ser considerado poco eficiente.
+En java, todos los objetos heredan de una clases Object. En c++ no tienen esa herencia comun.
+
+
+
+---4)¿Qué diferencia hay entre clase abstracta e interfaz?.
+Una clase es abstracta si no possee instancias y se utilizan para definir interfaces.
+Las interfaces a diferencia de las clases abstractas, todos sus metodos son abstractos, y perminen  herencia multiple 
+    entre clases.
+Una clase abstracta puede proporcionar la implementación de una interfaz pero una interfaz no puede proporcionar la 
+    implementación de una clase abstracta.
+
+
+
+---5)¿Qué son las excepciones? ¿Qué tipos de excepciones maneja Java?.
+Las excepciones son un mecanismo de que permite distinguir las ejecuciones anormales de las normales, nos permiten
+    terminar un procedimiento normalmente o de forma anormal. Son subtipos de la clase Exception o RuntimeException.
+
+Las excepciones que son subclases de RunetimeException se llaman no chequeables, que se pueden o no pones en el 
+    perfil del metodo. Estas provienen de errores de programacion y hay formas ssensillas de evitarlas. No hacer 
+    falta que esten adentro de un try y solo se listan cuando consideremos que son importantes.
+
+Las excepciones que no son subclases de RunetimeException se llaman chequeables, estas deben estar especificadas
+    en el perfil del metodo, deben estar adentro de una sentencia try/catch ademas se listan en la clausula throws. 
+    Las excepciones chequeables pasan cuando tenemos una situacion recuperable y son por errores de programacion.
+
+
+
+---6)Dar al menos dos ejemplos de uso de excepciones en Java.
+\Dropbox\Universidad\Estructura\Algoritmos1\Practicos\ejeException.java
+
+
+
+---7)¿Qué es un TAD?.
+Es una coleccion de elementos abstractos los cuales son caracterizados mediente un conjunto de operaciones sobre lo mismos.
+    Se relaciona con la idea del concepto de Algebra abstracta. Son como abstracciones de tipos, las operaciones y los
+    elemtos se definen describiendo las propiedades que cumplen y no explicitamente.
+    Tambien se los conoce como modelos matematicos que nos permiten realizar abstraciones sobre datos.
+
+
+
+
+---8)¿Qué propiedad debe cumplir una Función de abstracción que implementa un TAD y por qué es necesaria esa propiedad?.
+    Que sea suryectiva y que cada operación del algebra abstracta tiene una correspondiente en el algebra concreta.
+
+
+
+
+---9)¿Qué es una Estructura de Datos?. Dé al menos tres ejemplos de estructuras de datos lineales.
+Es una forma de organizar datos para facilitar su manipulacion, como por ejemplo loss arreglos, Pilas, colas.
+
+
+
+
+---10)Cual es la función del método repOK y como se relaciona con las operaciones asociadas a un tipo de datos?.
+el repOk es el invariante de la clase que dice que los objetos son correctos. Se relaciona 
+
+
+
+---11)Diseñar una representación para los números complejos. Dar la función de abstracción y la implementación de la suma y la multiplicación 
