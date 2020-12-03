@@ -1,0 +1,10 @@
+# Trabajo Práctico Nº1 del 2020
+Trabajo Práctico sobre Ordenamiento.
+
+Los ejercicios a realizar en este trabajo práctico están disponibles en el archivo *trabajo-practico-1-2020.pdf*.
+
+Se espera que las soluciones provistas consistan en código Java (archivo `.java`) estructurado en carpetas que
+correspondan a los paquetes utilizados. Cualquier archivo de texto debe estar en formato de texto no enriquecido
+(archivos `.txt`).
+
+A su vez se debe proveer instrucciones de compilación y ejecución para cada solución que requiera código.
